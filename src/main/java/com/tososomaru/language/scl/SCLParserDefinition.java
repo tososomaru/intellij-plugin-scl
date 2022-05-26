@@ -25,7 +25,7 @@ public class SCLParserDefinition implements ParserDefinition {
 
     @Override
     public @NotNull Lexer createLexer(Project project) {
-        return new SCLFlexAdapter();
+        return new SCLLexerAdapter();
     }
 
     @Override

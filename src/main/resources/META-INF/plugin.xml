@@ -36,5 +36,8 @@
                 language="SCL"
                 implementationClass="com.tososomaru.language.scl.SCLParserDefinition"/>
 
+        <lang.syntaxHighlighterFactory
+                language="SCL"
+                implementationClass="com.tososomaru.language.scl.SCLSyntaxHighlighterFactory"/>
     </extensions>
 </idea-plugin>
