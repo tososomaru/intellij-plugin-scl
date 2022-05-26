@@ -31,5 +31,10 @@
                 fieldName="INSTANCE"
                 language="SCL"
                 extensions="scl"/>
+
+        <lang.parserDefinition
+                language="SCL"
+                implementationClass="com.tososomaru.language.scl.SCLParserDefinition"/>
+
     </extensions>
 </idea-plugin>
