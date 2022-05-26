@@ -11,10 +11,12 @@
   elementTypeHolderClass="com.tososomaru.language.scl.psi.SCLTypes"
   elementTypeClass="com.tososomaru.language.scl.psi.SCLElementType"
   tokenTypeClass="com.tososomaru.language.scl.psi.SCLTokenType"
+
+  psiImplUtilClass="com.tososomaru.language.scl.psi.impl.SCLPsiImplUtil"
 }
 
 simpleFile ::= item_*
 
 private item_ ::= (property|COMMENT|CRLF)
 
-property ::= (KEY? SEPARATOR VALUE?) | KEY
+property ::= (KEY? SEPARATOR VALUE?) | KEY {methods=[getKey getValue]}

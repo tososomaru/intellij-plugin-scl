@@ -10,6 +10,7 @@ import com.intellij.psi.util.PsiTreeUtil;
 import static com.tososomaru.language.scl.psi.SCLTypes.*;
 import com.intellij.extapi.psi.ASTWrapperPsiElement;
 import com.tososomaru.language.scl.psi.*;
+import com.tososomaru.language.scl.psi.impl.SCLPsiImplUtil;
 
 public class SCLPropertyImpl extends ASTWrapperPsiElement implements SCLProperty {
 
@@ -25,6 +26,18 @@ public class SCLPropertyImpl extends ASTWrapperPsiElement implements SCLProperty
   public void accept(@NotNull PsiElementVisitor visitor) {
     if (visitor instanceof SCLVisitor) accept((SCLVisitor)visitor);
     else super.accept(visitor);
+  }
+
+  @Override
+  @Nullable
+  public String getKey() {
+    return SCLPsiImplUtil.getKey(this);
+  }
+
+  @Override
+  @Nullable
+  public String getValue() {
+    return SCLPsiImplUtil.getValue(this);
   }
 
 }
