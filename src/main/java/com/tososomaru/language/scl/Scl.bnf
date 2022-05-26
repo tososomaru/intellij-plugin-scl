@@ -1,0 +1,20 @@
+{
+  parserClass="com.tososomaru.language.scl.parser.SCLParser"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="SCL"
+  psiImplClassSuffix="Impl"
+  psiPackage="com.tososomaru.language.scl.psi"
+  psiImplPackage="com.tososomaru.language.scl.impl"
+
+  elementTypeHolderClass="com.tososomaru.language.scl.psi.SCLTypes"
+  elementTypeClass="com.tososomaru.language.scl.psi.SCLElementType"
+  tokenTypeClass="com.tososomaru.language.scl.psi.SCLTokenType"
+}
+
+simpleFile ::= item_*
+
+private item_ ::= (property|COMMENT|CRLF)
+
+property ::= (KEY? SEPARATOR VALUE?) | KEY

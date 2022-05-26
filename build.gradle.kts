@@ -5,6 +5,7 @@ plugins {
 
 group = "com.tososomaru.language"
 version = "1.0-SNAPSHOT"
+sourceSets["main"].java.srcDirs("src/main/gen")
 
 repositories {
     mavenCentral()
